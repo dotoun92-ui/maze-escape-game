@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Escape - Jeu d'Évasion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 MAZE ESCAPE</h1>
+            <div class="stats">
+                <div class="stat">❤️ Vie: <span id="health">100</span></div>
+                <div class="stat">⏱️ Temps: <span id="timer">0</span>s</div>
+                <div class="stat">🔑 Clés: <span id="keys">0</span>/3</div>
+            </div>
+        </div>
+
+        <div id="gameContainer">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+        </div>
+
+        <div class="controls">
+            <p>📍 Déplace-toi: <strong>FLÈCHES</strong> ou <strong>ZQSD</strong></p>
+            <p>🎯 Objectif: Récupère les 3 clés et atteins la sortie! ✨</p>
+            <p>⚠️ Évite les pièges 🔥 et les ennemis 👿</p>
+        </div>
+
+        <div id="gameOverScreen" class="gameOverScreen hidden">
+            <div class="gameOverContent">
+                <h2 id="gameOverTitle">GAME OVER</h2>
+                <p id="gameOverMessage"></p>
+                <p>Temps: <span id="finalTime">0</span>s</p>
+                <button onclick="location.reload()">Rejouer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
